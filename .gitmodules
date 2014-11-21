@@ -1,0 +1,3 @@
+[submodule "favico.js"]
+	path = favico.js
+	url = https://github.com/ejci/favico.js.git
