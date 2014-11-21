@@ -1,2 +1,2 @@
-# Reactive Favicon
-:waring: Work in progress :warning:
+# Reactive Favico
+:warning: Work in progress :warning:
