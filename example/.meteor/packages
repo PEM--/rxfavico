@@ -7,4 +7,9 @@ meteor-platform
 autopublish
 insecure
 pierreeric:rxfavico
+mquandalle:jade
+pierreeric:cssc
+pierreeric:cssc-colors
+pierreeric:cssc-normalize
+coffeescript
 
