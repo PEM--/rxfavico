@@ -1,8 +1,6 @@
-counter = 1
-
 Template.hello.events
   'click button': ->
-    switch
-      when 5 < counter < 10 then  rxFavico.set 'type', 'error'
-      when counter is 10 then rxFavico.set 'type', 'info'
-    rxFavico.set 'count', counter++
+    counter = (rxFavico.get 'count') + 1
+    type = if 5 < counter < 10 then 'error' else 'info'
+    rxFavico.set 'type', type
+    rxFavico.set 'count', counter
