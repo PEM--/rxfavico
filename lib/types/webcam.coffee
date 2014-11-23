@@ -1,4 +1,4 @@
-Favico.type.webcam = (action) ->
+Favico::type.webcam = (action) ->
   if not window.URL or not window.URL.createObjectURL
     window.URL = window.URL || {}
     window.URL.createObjectURL = (obj) -> obj

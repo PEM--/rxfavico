@@ -23,6 +23,8 @@ Package.onUse(function(api) {
     'lib/animation.coffee',
     // Browser polyfills
     'lib/browser.coffee',
+    // Link analyzer
+    'lib/link.coffee',
     // Color utils for the library
     'lib/utils.coffee',
     // Reactive use of the favicon

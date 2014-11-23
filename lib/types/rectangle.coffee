@@ -1,4 +1,4 @@
-Favico.type.rectangle = (opt) ->
+Favico::type.rectangle = (opt) ->
   opt = options opt
   more = false
   if opt.len is 2

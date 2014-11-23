@@ -1,2 +1,2 @@
-#favico = new Favico
+favico = new Favico
 #favico.badge 1

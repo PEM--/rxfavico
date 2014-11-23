@@ -1,4 +1,4 @@
-Favico.type.circle = (opt) ->
+Favico::type.circle = (opt) ->
   opt = options opt
   more = false
   if opt.len is 2

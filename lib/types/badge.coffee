@@ -1,4 +1,4 @@
-Favico.type.badge = (number, opts) ->
+Favico::type.badge = (number, opts) ->
   opts = (if typeof opts is 'string' then animation: opts else opts) or {}
   @_readyCb = ->
     try
