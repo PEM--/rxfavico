@@ -1,8 +1,8 @@
-Session.setDefault 'counter', 0
-
-Template.hello.helpers
-  counter: -> Session.get 'counter'
+counter = 1
 
 Template.hello.events
   'click button': ->
-    Session.set 'counter', (Session.get 'counter') + 1
+    switch
+      when 5 < counter < 10 then  rxFavico.set 'type', 'error'
+      when counter is 10 then rxFavico.set 'type', 'info'
+    rxFavico.set 'count', counter++

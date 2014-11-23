@@ -7,7 +7,13 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
-  api.use(['jquery', 'coffeescript', 'underscore']);
+  api.use([
+    'reactive-dict',
+    'tracker',
+    'jquery',
+    'coffeescript'
+    ], 'client'
+  );
   api.addFiles([
     'favico.js',
     'rxfavico.coffee'
