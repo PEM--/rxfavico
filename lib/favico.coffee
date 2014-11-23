@@ -1,5 +1,5 @@
 class @Favico
-  DEFAULT_OPTIONS:
+  @DEFAULT_OPTIONS:
     bgColor : '#d00'
     textColor : '#fff'
     fontFamily : 'sans-serif'
@@ -13,7 +13,6 @@ class @Favico
   animation: {}
   @browser: {}
   type: {}
-  link: {}
 
   constructor: (opt) ->
     @_queue = []
@@ -21,7 +20,7 @@ class @Favico
     @_ready = @_stop = false
 
     # Merge initial options
-    @_opt = _.extend @DEFAULT_OPTIONS, opt
+    @_opt = _.extend Favico.DEFAULT_OPTIONS, opt
     @_opt.bgColor = Favico.hexToRgb @_opt.bgColor
     @_opt.textColor = Favico.hexToRgb @_opt.textColor
     @_opt.position = @_opt.position.toLowerCase()
@@ -50,8 +49,7 @@ class @Favico
     isTypeExist = @type[String @_opt.type]?
     @_opt.type = if isTypeExist then @_opt.type else @DEFAULT_OPTIONS.type
     try
-      console.log @
-      @_orig = @link.getIcon()
+      @_orig = @getIcon()
       # Create temp canvas
       @_canvas = document.createElement 'canvas'
       # Create temp image
@@ -59,13 +57,13 @@ class @Favico
       if @_orig.hasAttribute 'href'
         @_img.setAttribute 'src', @_orig.getAttribute 'href'
         # Get width/height
-        @_img.onload = ->
+        @_img.onload = =>
           @_h = if @_img.height > 0 then @_img.height else 32
           @_w = if @_img.width > 0 then @_img.width else 32
           @_canvas.height = @_h
           @_canvas.width = @_w
           @_context = @_canvas.getContext '2d'
-          icon.ready()
+          @iconReady()
       else
         @_img.setAttribute 'src', ''
         @_h = 32

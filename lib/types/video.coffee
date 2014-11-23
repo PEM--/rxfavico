@@ -1,4 +1,4 @@
-Favico::type.video = (videoElement) ->
+Favico::video = (videoElement) ->
   @_readyCb = ->
     try
       if videoElement is 'stop'

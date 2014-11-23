@@ -46,8 +46,8 @@ Favico.animation =
       { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }
     ]
 
-Favico::animation.run = (opt, cb, revert, step) ->
-  type = if Favico.isPageHidden() then none else @_opt.animation
+Favico::animationRun = (opt, cb, revert, step) ->
+  type = if Favico.isPageHidden() then 'none' else @_opt.animation
   animationType = Favico.animation.types[type]
   if revert
     step = if step? then step else animationType.length - 1

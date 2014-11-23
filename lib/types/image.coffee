@@ -1,4 +1,4 @@
-Favico::type.image = (imageElement) ->
+Favico::image = (imageElement) ->
   @_readyCb = ->
     try
       w = imageElement.width
