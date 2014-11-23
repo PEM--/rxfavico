@@ -3,12 +3,21 @@ A reactive adaptation of [favico.js](http://lab.ejci.net/favico.js/) for Meteor.
 
 ![Favico with the default Meteor boilerplate](https://raw.githubusercontent.com/PEM--/rxfavico/master/asset/output.gif)
 
+Blog article: [A reactive favico for Meteor: rxFavico](http://pem-musing.blogspot.fr/2014/11/a-reactive-favico-for-meteor.html).
+
 ## Introduction
 This package brings 2 pieces together:
-* A reactive dictionnary `rxFavico` that facilitates the use of [favico.js](http://lab.ejci.net/favico.js/). Very handy for displaying notifications or tests results.
+* A reactive dictionary `rxFavico` that facilitates the use of [favico.js](http://lab.ejci.net/favico.js/). Very handy for displaying notifications or tests results.
 * The `Favico` class in the global space of your browser, just like a basic import of [favico.js](http://lab.ejci.net/favico.js/).
 
 ## Usage
+### Installation
+Like any other Meteor package:
+```html
+# In you Meteor project's folder
+meteor add pierreeric:rxfavico
+```
+
 ### First, the markup
 In your layout, just add a favico on which you set an id `rxfavico` and put your `favicon.ico` in your `/public` folder.
 
